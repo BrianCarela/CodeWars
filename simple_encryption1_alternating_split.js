@@ -67,6 +67,29 @@ function encrypt(text, n) {
 
 }
 
+///////////////////////////
+//CLEVER ANSWER////////////
+///////////////////////////
+
+// function encrypt(text, n) {
+//   console.log(text, n);
+//   if (!text || n <= 0) return text;
+  //  this while(n--) shit blows my mind. Instant loop from a number, to 0. Even if it's originally a parameter, that's some slick shit
+//   while (n--) {
+//     let ans = '';
+//     for (let i = 1; i < text.length; i += 2) {
+//       ans += text[i];
+//     }
+//     for (let i = 0; i < text.length; i += 2) {
+//       ans += text[i];
+//     }
+//     text = ans;
+//   }
+//   return text;
+// }
+
+
+
 // the following function is the undo version of above
 
 function decrypt(encryptedText, n) {
