@@ -1,9 +1,5 @@
 function firstNonRepeatingLetter(s) {
-  if(s.length == 1){
-    return s;
-  } else if(s == ''){
-    return '';
-  }
+
 
   for(var i = 0; i<s.length ; i++){
 
@@ -11,9 +7,17 @@ function firstNonRepeatingLetter(s) {
     let count = 0;
 
     for(var j = 0; j<s.length ; j++){
-      if(s[j] == s[i]){
-        count++
+
+      if(s[j] === s[j].toUpperCase()){
+        if(s[j] === s[i].toUpperCase()){
+          count++
+        }
+      } else if(s[j] === s[j].toLowerCase()){
+        if(s[j] === s[i].toLowerCase()){
+          count++
+        }
       }
+
     }
 
     if(count == 1){
@@ -21,6 +25,8 @@ function firstNonRepeatingLetter(s) {
     }
 
   }
+
+  return '';
 
 }
 // this is incomplete, and doesn't account for uppercase vs lowercase
